@@ -7,13 +7,13 @@ import Footer from '../src/components/Footer';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
 import {Router, useRouter} from 'next/router'
-import { route } from 'next/dist/next-server/server/router';
 import react from 'react';
 
 const Title = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.colors.secondary};
 `;
+
 
 export const QuizContainer = styled.div`
   width:100%;
@@ -25,6 +25,7 @@ export const QuizContainer = styled.div`
     padding:15px;
   }
  `;
+
 
 export default function Home() {
 
