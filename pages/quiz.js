@@ -7,9 +7,7 @@ import QuizContainer from '../src/components/QuizContainer';
 import Button from '../src/components/Button';
 
 
-function addResult(result){
-    setResults([...results,result]);
-}
+
 
 function ResultWidget({results}){
     return (
@@ -163,15 +161,20 @@ export default function QuizPage() {
      setScreenState(screenStates.QUIZ);
        }, 1 * 1000);
     }, []);
-  
+    
+    const  nextQuestion = questionIndex + 1;
     function handleSubmitQuiz() {
-      const nextQuestion = questionIndex + 1;
       if (nextQuestion < totalQuestions) {
         setCurrentQuestion(nextQuestion);
       } else {
         setScreenState(screenStates.RESULT);
       }
     }
+
+
+    function addResult(result){
+      setResults([...results,result]);
+  }
   
     return (
       <QuizBackground backgroundImage={db.bg}>

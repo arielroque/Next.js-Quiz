@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-import Head from 'next/head';
-import db from '../db.json';
+import styled from 'styled-components';import db from '../db.json';
 import Widget from '../src/components/Widget';
 import GitHubCorner from '../src/components/GithubCorner';
 import Footer from '../src/components/Footer';
@@ -17,19 +15,13 @@ const Title = styled.h1`
 `;
 
 
-
-
 export default function Home() {
 
   const router = useRouter();
   const [name,setName] = React.useState("");
 
   return (
-    <QuizBackground BackgroundImage={db.bg}>
-
-      <Head>
-        <title>AluraQuiz - Modelo Base</title>
-      </Head>
+    <QuizBackground backgroundImage={db.bg}>
 
       <QuizContainer>
 
